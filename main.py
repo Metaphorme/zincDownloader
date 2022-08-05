@@ -70,17 +70,16 @@ for z in ZINCS.copy():
         ZINCS.remove(z)
 
 # Determine file type
-if DownloadType == "SMILES":
-    DownloadType = "smi"
-elif DownloadType == "SDF":
-    DownloadType = "sdf"
-elif DownloadType == "CSV":
-    DownloadType = "csv"
-elif DownloadType == "XML":
-    DownloadType = "xml"
-elif DownloadType == "JSON":
-    DownloadType = "json"
-else:
+typePool = {
+    "SMILES" : "smi",
+    "SDF"    : "sdf",
+    "CSV"    : "csv",
+    "XML"    : "xml",
+    "JSON"   : "json"
+}
+
+DownloadType = typePool.get(DownloadType)
+if DownloadType == None:
     print("Error: DownloadType Not in case")
     exit()
 
