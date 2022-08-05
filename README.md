@@ -46,6 +46,14 @@ DownloadThread = 3
 ```
 
 ## Credits
+```
+       .__              ________                      .__                    .___            
+_______|__| ____   ____ \______ \   ______  _  ______ |  |   _________     __| _/___________  
+\___   /  |/    \_/ ___\ |    |  \ /  _ \ \/ \/ /    \|  |  /  _ \__  \   / __ |/ __ \_  __ \  
+ /    /|  |   |  \  \___ |    `   (  <_> )     /   |  \  |_(  <_> ) __ \_/ /_/ \  ___/|  | \\  
+/_____ \__|___|  /\___  >_______  /\____/ \/\_/|___|  /____/\____(____  /\____ |\___  >__|  
+      \/       \/     \/        \/                  \/                \/      \/    \/   
+```
 zincDownloader, An easy multithreaded zinc database downloader.  
 Thanks: [ZINC](https://zinc.docking.org/), zinc.docking.org, provided by [UCSF](https://pharmchem.ucsf.edu/).  
 Author: [Metaphorme](https://blog.metaphorme.net/), github.com/Metaphorme, in [CPU](https://www.cpu.edu.cn/).  
