@@ -1,0 +1,11 @@
+https://zinc.docking.org/substances/ZINC000409425457.sdf
+https://zinc.docking.org/substances/ZINC000409425451.sdf
+https://zinc.docking.org/substances/ZINC000100095102.sdf
+https://zinc.docking.org/substances/ZINC000001800442.sdf
+https://zinc.docking.org/substances/ZINC000000130406.sdf
+https://zinc.docking.org/substances/ZINC000000130404.sdf
+https://zinc.docking.org/substances/ZINC000003865857.sdf
+https://zinc.docking.org/substances/ZINC000000130400.sdf
+https://zinc.docking.org/substances/ZINC000000130402.sdf
+https://zinc.docking.org/substances/ZINC000095094109.sdf
+https://zinc.docking.org/substances/ZINC000409425460.sdf
