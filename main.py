@@ -4,14 +4,14 @@
 
 # Please write the CSV filename and the column contains ZINC Title here
 CSVfilename = "B_D_SP.csv"
-column = 1
+Column = 1
 # DownloadType, For example, "SMILES", "SDF", "CSV", "XML", "JSON"
-downloadType = "SDF"
+DownloadType = "SDF"
 # GetDownloadListOnly, if GetDownloadListOnly is True, output downloadList.txt only,
 # then you could download on remote or download with other tools like aria2.
 GetDownloadListOnly = False
 # The number of threads to download. PLEASE DON'T SET HIGER THAN 5!!!
-downloadThread = 3
+DownloadThread = 3
 
 # -----------------------  Finish Line -----------------------
 
@@ -37,10 +37,10 @@ print("")
 print("{:<95}".format("These are the settings, please make sure they are right."))
 print("")
 print(f'\tCSVfilename             -->     {CSVfilename}')
-print(f'\tcolumn                  -->     {column}')
-print(f'\tdownloadType            -->     {downloadType}')
+print(f'\tColumn                  -->     {Column}')
+print(f'\tDownloadType            -->     {DownloadType}')
 print(f'\tGetDownloadListOnly     -->     {GetDownloadListOnly}')
-print(f'\tdownloadThread          -->     {downloadThread}')
+print(f'\tDownloadThread          -->     {DownloadThread}')
 print("")
 print("{: <95}".format("You could change these Settings manually in main.py"))
 print("{: <95}".format("The program will be activated in 5 seconds."))
@@ -55,7 +55,7 @@ import time
 
 time.sleep(5)
 
-ZINCS = readCSV.getCSV(fileName=CSVfilename, column=column)
+ZINCS = readCSV.getCSV(fileName=CSVfilename, column=Column)
 
 # Remove duplication
 ZINCS = set(ZINCS)
@@ -70,25 +70,25 @@ for z in ZINCS.copy():
         ZINCS.remove(z)
 
 # Determine file type
-if downloadType == "SMILES":
-    downloadType = "smi"
-elif downloadType == "SDF":
-    downloadType = "sdf"
-elif downloadType == "CSV":
-    downloadType = "csv"
-elif downloadType == "XML":
-    downloadType = "xml"
-elif downloadType == "JSON":
-    downloadType = "json"
+if DownloadType == "SMILES":
+    DownloadType = "smi"
+elif DownloadType == "SDF":
+    DownloadType = "sdf"
+elif DownloadType == "CSV":
+    DownloadType = "csv"
+elif DownloadType == "XML":
+    DownloadType = "xml"
+elif DownloadType == "JSON":
+    DownloadType = "json"
 else:
-    print("Error: downloadType Not in case")
+    print("Error: DownloadType Not in case")
     exit()
 
 # Generate url List
 if GetDownloadListOnly == True:
     with open("downloadList.txt", "w") as f:
         for z in ZINCS:
-            f.write("https://zinc.docking.org/substances/" + z + "." + downloadType + "\n")
+            f.write("https://zinc.docking.org/substances/" + z + "." + DownloadType + "\n")
     print("Written Finished")
     exit()
 
@@ -101,8 +101,8 @@ class Downloader(threading.Thread):
     def run(self):
         while len(ZINCS):
             z = ZINCS.pop()
-            o = download.download(url="https://zinc.docking.org/substances/" + z + "." + downloadType  \
-                , outputName="output/" + z + "." + downloadType)
+            o = download.download(url="https://zinc.docking.org/substances/" + z + "." + DownloadType  \
+                , outputName="output/" + z + "." + DownloadType)
 
             if o[1] != "":
                 ZINCS.add(z)
@@ -116,7 +116,7 @@ class Downloader(threading.Thread):
 
 # Start Thread
 download_thread_num = 0
-for i in range(downloadThread):
+for i in range(DownloadThread):
     Downloader().start()
     download_thread_num += 1
 

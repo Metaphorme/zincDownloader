@@ -28,14 +28,14 @@ An easy multithreaded zinc database downloader.
 
 # Please write the CSV filename and the column contains ZINC Title here
 CSVfilename = "B_D_SP.csv"
-column = 1
+Column = 1
 # DownloadType, For example, "SMILES", "SDF", "CSV", "XML", "JSON"
-downloadType = "SDF"
+DownloadType = "SDF"
 # GetDownloadListOnly, if GetDownloadListOnly is True, output downloadList.txt only,
 # then you could download on remote or download with other tools like aria2.
 GetDownloadListOnly = False
 # The number of threads to download. PLEASE DON'T SET HIGER THAN 5!!!
-downloadThread = 3
+DownloadThread = 3
 
 # -----------------------  Finish Line -----------------------
 ```
