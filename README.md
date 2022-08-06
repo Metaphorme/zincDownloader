@@ -15,7 +15,7 @@ An easy multithreaded zinc database downloader.
 
 3. Remove examples  
     `B_D_SP.csv, output/*.sdf`, `downloadList.txt` are examples for demonstration.  
-    Remove them if you are already proficiency with this tool.
+    Remove them if you are already proficient with this tool.
     ```bash
     rm -rf output/*.sdf downloadList.txt
     ```
