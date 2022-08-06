@@ -14,8 +14,8 @@ An easy multithreaded zinc database downloader.
   $ pip3 install -r requirements.txt
 ```
 
-3. Remove Examples
-  B_D_SP.csv, output/*.sdf, downloadList.txt are examples for you to know how to use it.
+3. Remove Examples  
+  `B_D_SP.csv, output/*.sdf`, `downloadList.txt` are examples for you to know how to use it.  
   Remove them if already proficiency in using.
 ```bash
   $ rm -rf output/*.sdf downloadList.txt
