@@ -21,7 +21,7 @@ An easy multithreaded zinc database downloader.
     ```
 
 4. Edit the settings  
-    Please edit main.py
+    Please edit `main.py`
     ```python
     # ------------------------------ IMPORTENT--SETTINGS ------------------------------
 
