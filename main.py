@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 
-# -------------------- IMPORTENT SETTINGS --------------------
+# ------------------------------ IMPORTENT--SETTINGS ------------------------------
 
-# Please write the CSV filename and the column contains ZINC Title here
+# Please specify the CSV filename and the column that contains ZINC Title here.
 CSVfilename = "B_D_SP.csv"
 Column = 1
-# DownloadType, For example, "SMILES", "SDF", "CSV", "XML", "JSON"
+# DownloadType, selectable from "SMILES", "SDF", "CSV", "XML", "JSON".
 DownloadType = "SDF"
-# GetDownloadListOnly, if GetDownloadListOnly is True, output downloadList.txt only,
-# then you could download on remote or download with other tools like aria2.
+# If GetDownloadListOnly is set to True, this tool will only generate the 
+# downloadList.txt, then you can download on remote or with other tools like aria2.
 GetDownloadListOnly = False
-# The number of threads to download. PLEASE DON'T SET HIGER THAN 5!!!
+# The number of threads to download. PLEASE DON'T SET TO HIGER THAN 5!!!
 DownloadThread = 3
 
-# -----------------------  Finish Line -----------------------
+# --------------------------------- FINISH---LINE ---------------------------------
 
 print("")
 print("")
